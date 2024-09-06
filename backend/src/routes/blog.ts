@@ -11,7 +11,7 @@ import { verify } from 'hono/jwt';
         JWT_SECRET : string
     },
     Variables:{
-      userId : string
+      userId : string,
       prisma : PrismaClient,
     }
 }>()
