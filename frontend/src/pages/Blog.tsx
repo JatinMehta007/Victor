@@ -22,8 +22,12 @@ export const Blog = () =>{
         </div>
      }
 
+     if (!blog) {
+      return <div>Error: Blog not found</div>;
+    }
     return <div>
-      <FullBlog blog = {blog}  />
+      
+      <FullBlog blog={blog}  />
     </div>
       
 }
