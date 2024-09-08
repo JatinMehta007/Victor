@@ -21,7 +21,6 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
       // if type is sign up then it will be signup if not then it will be signin
       if(type === "signup"){
         const response =  await axios.post(`${BACKEND_URL}/api/v1/user/signup` , postInputs);  
-        
         const jwt = response.data;
         localStorage.setItem("token", jwt);
         navigate("/blogs");
@@ -56,7 +55,7 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
                 : "Already have an account?"}
               <Link
                 className="pl-2 underline text-green-500 "
-                to={type === "signin" ? "/signup" : "/signin"}
+                to={type === "signin" ? "/" : "/signin"}
               >
                 {type === "signin" ? "Sign up" : "Sign in"}
               </Link>
