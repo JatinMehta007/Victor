@@ -42,26 +42,26 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
 
       // if type is sign up then it will be signup if not then it will be signin
   return (
-    <div className="h-screen flex justify-center flex-col">
+    <div className="h-screen flex justify-center flex-col ">
       <div className="flex justify-center font-mono ">
-        <div className="shadow-lg border p-3 rounded-lg">
-          <div className="px-10">
-            <div className="text-3xl flex justify-center pt-5">
+        <div className="shadow-lg border md:p-3 p-10 rounded-lg ">
+          <div className="md:px-10 ">
+            <div className="text-3xl flex justify-center pt-5 ">
               { type === "signup" ? "JOIN VICTOR!" : "WELCOME VICTOR!"}
               </div>
-            <div className="text-slate-400">
+            <div className="text-slate-400 text-center">
               {type === "signin"
                 ? "Don't have an account?"
                 : "Already have an account?"}
               <Link
-                className="pl-2 underline text-green-500 "
+                className="pl-2 underline text-green-500   "
                 to={type === "signin" ? "/" : "/signin"}
               >
                 {type === "signin" ? "Sign up" : "Sign in"}
               </Link>
             </div>
           </div>
-          <div className="pt-4">
+          <div className="pt-4  ">
             {type === "signup" ? (
               <LabelledInput
                 label="Name"
