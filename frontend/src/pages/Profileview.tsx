@@ -21,15 +21,12 @@ export const Profileview = () => {
           </div>
                 {authorName}
             </div>
-            <button>
 
             <div className=" flex md:ml-24 ml-10 mt-10 under gap-10 border-b pb-[2px] md:w-[700px] w-[360px]   ">
+            <button>
                 <p className="underline underline-offset-8  ">Home</p>
-            <div >
-            <p className="text-gray-700">About</p>
-            </div>
-            </div>
                 </button>
+              </div>
                 
             <div className="bg-gray-100 md:m-24 m-10 grid md:grid-cols-4 grid-row-4 md:w-auto  w-[360px] md:h-40 h-80 rounded-md">
              <div className="md:col-span-2 row-span-2 rounded-md">
@@ -82,3 +79,13 @@ export const Profileview = () => {
     </>
   );
 };
+
+export const About=()=>{
+  return <>
+  <div className="bg-gray-100 md:m-24 m-10 grid md:grid-cols-4 grid-row-4 md:w-auto  w-[360px] md:h-40 h-80 rounded-md">
+    sd
+  </div>
+  </>
+    
+  
+}
