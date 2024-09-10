@@ -35,7 +35,7 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
         localStorage.setItem("token", jwt);
         navigate("/blogs");
       }} catch (e){
-        alert(type === "signin" ? "Error while signing in" : "Error while signing up");
+        alert(type === "signin" ? "write a valid email ID!" : "write a valid email ID! OR PASSWORD");
     } finally{
       setIsLoading(false);
     }
