@@ -3,9 +3,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { SigninInput, SignupInput } from "@mrcricket/medium-common";
 import axios from "axios";
 import { BACKEND_URL } from "../config";
+import { Spinner } from "./Spinner";
+
 
 export const Auth = ({ type }: { type: "signup" | "signin" }) => {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
   const [postInputs, setPostInputs] = useState<SignupInput>({
     name: "",
     username: "",
@@ -18,7 +21,9 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
   })
   async function sendRequest() {
     try{
+      setIsLoading(true);
       // if type is sign up then it will be signup if not then it will be signin
+    
       if(type === "signup"){
         const response =  await axios.post(`${BACKEND_URL}/api/v1/user/signup` , postInputs);  
         const jwt = response.data;
@@ -30,16 +35,21 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
         localStorage.setItem("token", jwt);
         navigate("/blogs");
       }} catch (e){
-        if(type === "signin"){
-        alert("error while signing in");
-        // alert the user here that the request was failed
-      }else {
-        alert("error while signing up");
-        
-      }
+        alert(type === "signin" ? "Error while signing in" : "Error while signing up");
+    } finally{
+      setIsLoading(false);
     }
       }
 
+      if (isLoading) {
+        // Render the spinner as a full-page overlay
+        return (
+          <div className="h-screen flex justify-center items-center">
+            <Spinner />
+          </div>
+        );
+      }
+    
       // if type is sign up then it will be signup if not then it will be signin
   return (
     <div className="h-screen flex justify-center flex-col ">
@@ -132,7 +142,7 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
 
             <button onClick={sendRequest} type="button" className="mt-5 w-full text-white bg-green-700 hover:bg-green-500  focus:outline-none focus:ring-4 focus:ring-gray-300 font-bold rounded-lg text-lg  px-5 py-2.5 "
             >
-              {type === "signup" ? "Sign up" : "Sign in"}
+              { type === "signup" ? "Sign up" : "Sign in"}
             </button>
           </div>
         </div>
