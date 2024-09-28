@@ -32,7 +32,7 @@
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/
+git clone https://github.com/JatinMehta007/Victor.git
 cd Victor
 ```
 
