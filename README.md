@@ -16,7 +16,7 @@
 
 -Tailwind CSS: With Tailwind, I was able to create a modern, responsive design that looks great on any device.
 
-Features:
+## Features:
 
 📝 Create, Edit, and Delete Blog Posts: Easily create, update, or remove your blog posts with real-time feedback.
 
