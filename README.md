@@ -27,5 +27,9 @@
 🚀 Responsive Design: Tailwind CSS ensures a fluid, responsive experience across all devices.
 
 
+# Setup Locally
+
+Cloning the Repository
+git clone 
   
   
