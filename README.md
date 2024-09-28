@@ -27,9 +27,44 @@
 🚀 Responsive Design: Tailwind CSS ensures a fluid, responsive experience across all devices.
 
 
-# Setup Locally
+# Setup Locally 
 
-Cloning the Repository
-git clone 
+**Cloning the Repository**
+
+```bash
+git clone https://github.com/
+cd Victor
+```
+
+**Install the dependencies**
+
+```bash
+npm install
+```
+
+**Set up Environment Variables**
+
+```bash
+cd backend
+create .env file
+now , write your DATABASE_URL to store a data
+```
+
+setup DB locally
+```bash
+create wrangler.toml
+now, write your connection pool in DATABASE_URL
+
+npx prisma migrate dev
+npx prisma db seed 
+npx prisma generate
+```
+
+**Run locally**
+```bash
+cd ../..
+npm run dev
+```
+
   
   
