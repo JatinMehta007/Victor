@@ -53,7 +53,7 @@ now , write your DATABASE_URL to store a data
 setup DB locally
 ```bash
 create wrangler.toml
-now, write your connection pool in DATABASE_URL
+now, write your connection pool
 
 npx prisma migrate dev
 npx prisma db seed 
