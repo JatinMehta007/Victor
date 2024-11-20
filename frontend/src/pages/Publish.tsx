@@ -18,7 +18,7 @@ export const Publish =() =>{
       <input onChange={(e) => {
                 setTitle(e.target.value)
       }} 
-      type="text" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  " placeholder="Title" />
+      type="text" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block sm:w-[90%] md:w-[95%] p-2.5 ml-5  " placeholder="Title" />
        
         <TextEditor onChange={(e) => {
             setContent(e.target.value)
@@ -36,7 +36,7 @@ export const Publish =() =>{
                             });
                             navigate(`/blog/${response.data.id}`)
                         }}
-                       type="submit" className="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
+                       type="submit" className="inline-flex sm:ml-2 md:ml-2 xl:ml-0 items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800 ">
                             Publish post
             </button>
             </div>
@@ -47,7 +47,7 @@ export const Publish =() =>{
 
 function TextEditor({ onChange } : {onChange : (e : ChangeEvent<HTMLTextAreaElement>) => void}){
      
-return <div className="pt-8">
+return <div className="pt-8 p-1">
    <div className="w-full mb-4 border pt-4">
        <div className="flex items-center justify-between px-3 py-2 border-b dark:border-gray-600">
            <div className="flex flex-wrap items-center divide-gray-200 sm:divide-x sm:rtl:divide-x-reverse dark:divide-gray-600">
@@ -125,11 +125,11 @@ return <div className="pt-8">
                <div className="tooltip-arrow" data-popper-arrow></div>
            </div>
        </div>
-       <div className="w-full mb-4 ">
+       <div className="w-full mb-4">
 
        <div className="flex items-center justify-between border">
        <div className="my-2 bg-white rounded-b-lg w-full ">
-           <label  className="sr-only">Publish post</label>
+           <label  className="sr-only ">Publish post</label>
            <textarea onChange = {onChange} id="editor" rows={8} className="focus:outline-none block w-full px-0 pl-2 text-sm  bg-white border-0  " placeholder="Write an article..." required ></textarea>
        </div>
        </div>

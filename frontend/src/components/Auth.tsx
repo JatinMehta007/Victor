@@ -54,12 +54,12 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
   return (
     <div className="h-screen flex justify-center flex-col ">
       <div className="flex justify-center font-mono ">
-        <div className="shadow-lg border md:p-3 p-10 rounded-lg ">
+        <div className="shadow-lg border md:p-3 p-5 rounded-lg ">
           <div className="md:px-10 ">
             <div className="text-3xl flex justify-center pt-5 ">
               { type === "signup" ? "JOIN VICTOR!" : "WELCOME VICTOR!"}
               </div>
-            <div className="text-slate-400 text-center">
+            <div className="text-slate-400">
               {type === "signin"
                 ? "Don't have an account?"
                 : "Already have an account?"}

@@ -23,7 +23,7 @@ import { verify } from 'hono/jwt';
            const user = await verify(authHeader,c.env.JWT_SECRET);
            
             if(user){
-              c.set('userId', user.id);
+              c.set('userId', user.id); 
               await next();
             } else{
               c.status(403)
