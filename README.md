@@ -23,7 +23,7 @@
 
 ## 📸 Preview
 
-![Dashboard Screenshot](![Dashboard Screenshot](https://raw.githubusercontent.com/JatinMehta007/Victor/main/frontend/public/dash.png)) <!-- Replace with actual image path -->
+![Dashboard Screenshot](.frontend/public/dash.png) <!-- Replace with actual image path -->
 ![Signup Screenshot](.frontend/public/signup.png) <!-- Replace with actual image path -->
 ---
 
