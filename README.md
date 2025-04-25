@@ -23,8 +23,8 @@
 
 ## 📸 Preview
 
-![Dashboard Screenshot](.frontend/public/dash.png) <!-- Replace with actual image path -->
-![Signup Screenshot](.frontend/public/signup.png) <!-- Replace with actual image path -->
+![Dashboard Screenshot](..frontend/public/dash.png) <!-- Replace with actual image path -->
+![Signup Screenshot](..frontend/public/signup.png) <!-- Replace with actual image path -->
 ---
 
 ## ✨ Features
