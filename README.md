@@ -23,9 +23,9 @@
 
 ## 📸 Preview
 
+▶️ [Watch Demo Video](https://victor-jatinmehta.vercel.app/video.mp4)
 ![Dashboard Screenshot](./frontend/public/dash.png) <!-- Replace with actual image path -->
 ![Signup Screenshot](./frontend/public/signup.png) <!-- Replace with actual image path -->
-![Signup Screenshot](./frontend/public/video2.mp4) <!-- Replace with actual image path -->
 
 ---
 
