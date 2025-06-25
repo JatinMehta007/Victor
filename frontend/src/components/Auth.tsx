@@ -4,11 +4,12 @@ import { SigninInput, SignupInput } from "@mrcricket/medium-common";
 import axios from "axios";
 import { BACKEND_URL } from "../config";
 import { Spinner } from "./Spinner";
-
+import { Eye, EyeOff } from "lucide-react";
 
 export const Auth = ({ type }: { type: "signup" | "signin" }) => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const [postInputs, setPostInputs] = useState<SignupInput>({
     name: "",
     username: "",
@@ -111,25 +112,34 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
                />
              ): null}
             
-            {type === "signup" ? (
-              <LabelledInput
-                label="Password"
-                type={"password"}
-                placeholder="Password(min(6))"
-                onChange={(e) => {
-                  setPostInputs({
-                    ...postInputs,
-                    password: e.target.value,
-                  });
-                }}
-              />
-            ):null}
+              {type === "signup" ? (
+                <div className="relative">
+                  <LabelledInput
+                    label="Password"
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Password (min 6)"
+                    onChange={(e) => {
+                      setPostInputs({
+                        ...postInputs,
+                        password: e.target.value,
+                      });
+                    }}
+                  />
+                  <span
+                    onClick={() => setShowPassword((prev) => !prev)}
+                    className="absolute  cursor-pointer right-3 bottom-3"
+                  >
+                    {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                  </span>
+                </div>
+              ) : null}
 
-            
+           
             {type === "signin" ? (
+              <div className="relative">
              <LabelledInput
               label="Password"
-              type={"password"}
+              type={showPassword ? "text" : "password"}
               placeholder="Password"
               onChange={(e) => {
                 setGetInputs({
@@ -137,7 +147,14 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
                   password: e.target.value,
                 });
               }}
-            />
+              />
+               <span
+                    onClick={() => setShowPassword((prev) => !prev)}
+                    className="absolute  cursor-pointer right-3 bottom-3"
+                  >
+                    {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                  </span>
+              </div>
             ):null}
 
             <button onClick={sendRequest} type="button" className="mt-5 w-full text-white bg-green-700 hover:bg-green-500  focus:outline-none focus:ring-4 focus:ring-gray-300 font-bold rounded-lg text-lg  px-5 py-2.5 "
