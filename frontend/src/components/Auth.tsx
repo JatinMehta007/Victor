@@ -23,7 +23,7 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
   async function sendRequest() {
     try{
       setIsLoading(true);
-      // if type is sign up then it will be signup if not then it will be signin
+      // if type is sign up then it will be signup if not then it will be signINc
     
       if(type === "signup"){
         const response =  await axios.post(`${BACKEND_URL}/api/v1/user/signup` , postInputs);  
